@@ -31,7 +31,7 @@ def get_new_zillow_data():
     JOIN propertylandusetype using (propertylandusetypeid)
     WHERE propertylandusedesc = "Single Family Residential"
     '''
-    return pd.read_sql(sql, get_db_url('zillow', user, host, password))
+    return pd.read_sql(sql, get_db_url('zillow'))
 
 
 def handle_nulls(df):    
